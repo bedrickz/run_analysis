@@ -1,18 +1,17 @@
 library(data.table)
 
 
-## Takes the location of the "UCI HAR Dataset folder" as an input and then
-## combines the test and train sets into a single table containing
+## Combines the test and train sets into a single table containing
 ## summarized measurements for each subject and activity
-run_analysis <- function(directory) {
+run_analysis <- function() {
 
         
-x_test<- read.table(paste(directory, "/UCI HAR Dataset/test/X_test.txt", sep = ""))
-y_test<- read.table(paste(directory, "/UCI HAR Dataset/test/y_test.txt", sep = ""))
-subject_test<- read.table(paste(directory, "/UCI HAR Dataset/test/subject_test.txt", sep = ""))
-x_train<- read.table(paste(directory, "/UCI HAR Dataset/train/X_train.txt", sep = ""))
-y_train<- read.table(paste(directory, "/UCI HAR Dataset/train/y_train.txt", sep = ""))
-subject_train<- read.table(paste(directory, "/UCI HAR Dataset/train/subject_train.txt", sep = ""))
+x_test<- read.table(paste(getwd(), "/UCI HAR Dataset/test/X_test.txt", sep = ""))
+y_test<- read.table(paste(getwd(), "/UCI HAR Dataset/test/y_test.txt", sep = ""))
+subject_test<- read.table(paste(getwd(), "/UCI HAR Dataset/test/subject_test.txt", sep = ""))
+x_train<- read.table(paste(getwd(), "/UCI HAR Dataset/train/X_train.txt", sep = ""))
+y_train<- read.table(paste(getwd(), "/UCI HAR Dataset/train/y_train.txt", sep = ""))
+subject_train<- read.table(paste(getwd(), "/UCI HAR Dataset/train/subject_train.txt", sep = ""))
 
 ## Build a single data frame for the test data
 test <- data.frame(rec = 1:nrow(x_test))
