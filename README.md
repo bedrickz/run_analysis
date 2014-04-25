@@ -16,6 +16,6 @@ This script contains a function `run_analysis()` that performs the following act
 4.  Appends the activity numbers from the train data as a new column in the 'train' variable
 5.  Appends the subject numbers from the train data as a new column in the 'train' variable
 
-The 'train' and 'test' data frame are then concatinated into a single data table called 'full'
+The 'train' and 'test' data frames are then concatinated into a single data table called 'full'
 
 The average mean and standard deviation per activity per subject is then used to create a data table called 'tidy' which is returned as the output of the function.
