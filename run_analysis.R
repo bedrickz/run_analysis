@@ -31,7 +31,15 @@ train["subject"] <- subject_train[1]
 full <- data.table(rbind(test, train))
 
 ## Build the tidy dataset
-tidy <- full[,list(avg_measurement = mean(mean), avg_deviation = mean(std_dev)),by=list(activity,subject)]
+tidy <- full[,list(avg_measurement = mean(mean), avg_deviation = mean(std_dev)),by=list(subject,activity)]
+
+## Change the numeric activity values to more readable strings
+tidy$activity[tidy$activity == 1] <- "WALKING"
+tidy$activity[tidy$activity == 2] <- "WALKING_UPSTAIRS"
+tidy$activity[tidy$activity == 3] <- "WALKING_DOWNSTAIRS"
+tidy$activity[tidy$activity == 4] <- "SITTING"
+tidy$activity[tidy$activity == 5] <- "STANDING"
+tidy$activity[tidy$activity == 6] <- "LAYING"
 
 ## Output the dataset
 tidy
