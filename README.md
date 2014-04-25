@@ -20,10 +20,10 @@ The mean of each column per activity per subject is then used to create a data t
 
 The resulting columns are:
 
-..."subject" - The id of the subject
-..."activity" - the activity the subject is performing
-..."tBodyAcc-mean-X"
-..."tBodyAcc-mean-Y"          
+*."subject" - The id of the subject
+*."activity" - the activity the subject is performing
+*."tBodyAcc-mean-X"
+*."tBodyAcc-mean-Y"          
 "tBodyAcc-mean-Z"
 "tBodyAcc-std-X"
 "tBodyAcc-std-Y"
